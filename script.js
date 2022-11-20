@@ -13,3 +13,7 @@ function pay() {
     window.alert(products.join(", \n"));
     location.href = "compra.html"
 }
+function payy() {
+    window.alert(products.join(", \n"));
+    location.href = "nocompra.html"
+}
