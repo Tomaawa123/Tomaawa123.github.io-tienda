@@ -1,0 +1,169 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tienda de musica Toma awa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+</head>
+
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="logo.png" alt="logo de la empresa">
+            </div>
+            <h1> Tienda de musica Toma awa
+            </h1>
+            <nav>
+                <a href="#" class="nav-link"> inicio</a>
+                <a href="signin.html" class="nav-link"> Iniciar sesión</a>
+            </nav>
+            <button id="checkout" class="button-checkout" onclick="pay()">Pagar</button>
+    </header>
+
+    <div class="page-content">
+        <div class="product-container">
+            <h3>Acordeon HOHNER CONCERTO III</h3>
+            <img src="acordeonn.jpg" height="200" width="300">
+            <h3>$7.307.543</h3>
+            <button class="button-add" onclick="add('acordeonn', 7307543)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Arpa</h3>
+            <img src="arpa.jpg" height="200" width="300">
+            <h3>$465.990</h3>
+            <button class="button-add" onclick="add('arpa', 465990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Bajo</h3>
+            <img src="bajo.jpg" height="200" width="300">
+            <h3>$179.990</h3>
+            <button class="button-add" onclick="add('bajo', 179990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Bateria</h3>
+            <img src="bateria.jpeg" height="200" width="300">
+            <h3>$599.990</h3>
+            <button class="button-add" onclick="add('bateria', 599990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Bateria electrica</h3>
+            <img src="bateriaelectrica.jpg" height="200" width="300">
+            <h3>$253.990</h3>
+            <button class="button-add" onclick="add('bateriaelectrica', 253990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Teclado EK-50</h3>
+            <img src="ek50.jpg" height="200" width="300">
+            <h3>$379.680</h3>
+            <button class="button-add" onclick="add('ek50', 379680)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Guitarra clasica</h3>
+            <img src="guitarraclasica.jpg" height="200" width="300">
+            <h3>$37.990</h3>
+            <button class="button-add" onclick="add('guitarraclasica', 37990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Guitarra electrica</h3>
+            <img src="guitarraelectrica.jpg" height="200" width="300">
+            <h3>$209.990</h3>
+            <button class="button-add" onclick="add('guitarraelectrica', 209990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Guitarra electrica 4 mangos</h3>
+            <img src="guitarraelectrica4.jpg" height="200" width="300">
+            <h3>$469.990</h3>
+            <button class="button-add" onclick="add('guitarraelectrica4', 469990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Guitarra electro acustica</h3>
+            <img src="guitarraelectroacustica.jpg" height="200" width="300">
+            <h3>$49.990</h3>
+            <button class="button-add" onclick="add('guitarraelectroacustica', 49990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Handpan</h3>
+            <img src="handpan.jpg" height="200" width="300">
+            <h3>$227.808</h3>
+            <button class="button-add" onclick="add('handpan', 227808)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Kalimba</h3>
+            <img src="kalimba.jpg" height="200" width="300">
+            <h3>$14.990</h3>
+            <button class="button-add" onclick="add('kalimba', 14990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Mezcladora de audio</h3>
+            <img src="mezcladoraudio.jpg" height="200" width="300">
+            <h3>$103.501</h3>
+            <button class="button-add" onclick="add('mezladoraaudio', 103501)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Microfono condensador</h3>
+            <img src="microfono.jpg" height="200" width="300">
+            <h3>$88.990</h3>
+            <button class="button-add" onclick="add('microfono', 88990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Acordeon HOHNER CONCERTO II</h3>
+            <img src="acordeon.jpg" height="200" width="300">
+            <h3>$1.599.990</h3>
+            <button class="button-add" onclick="add('acordeon', 1599990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Parlante Onyx</h3>
+            <img src="onyx.jpg" height="200" width="300">
+            <h3>$159.990</h3>
+            <button class="button-add" onclick="add('onyx', 159990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Teclado PA1000</h3>
+            <img src="pa1000.jpg" height="200" width="300">
+            <h3>$1.729.452</h3>
+            <button class="button-add" onclick="add('pa1000', 1729452)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Parlante</h3>
+            <img src="parlante.png" height="200" width="300">
+            <h3>$29.990</h3>
+            <button class="button-add" onclick="add('parlante', 29990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Piano</h3>
+            <img src="piano.png" height="200" width="300">
+            <h3>$15.229.900</h3>
+            <button class="button-add" onclick="add('piano', 15229900)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Guitarra Pikasso</h3>
+            <img src="pikaso.jpg" height="200" width="300">
+            <h3>$509.990</h3>
+            <button class="button-add" onclick="add('pikaso', 509990)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Trompeta</h3>
+            <img src="trompeta.jpg" height="200" width="300">
+            <h3>$325.000</h3>
+            <button class="button-add" onclick="add('trompeta', 325000)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Trompeta 4 pistones</h3>
+            <img src="trompeta4.jpg" height="200" width="300">
+            <h3>$4.080.533</h3>
+            <button class="button-add" onclick="add('trompeta4', 4080533)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Violin</h3>
+            <img src="violin.png" height="200" width="300">
+            <h3>$49.990</h3>
+            <button class="button-add" onclick="add('violin', 49990)">Agregar</button>
+        </div>
+    </div>
+    <h1><img src="logo.png" height="70" width="75">© Toma awa 2022, tomawa123.github.io, Inc <img src="no c.png" height="70" width="75"></h1>
+</body>
+
+</html>
