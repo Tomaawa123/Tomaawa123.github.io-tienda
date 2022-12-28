@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <html lang="es">
+    <title>Tienda de musica Toma awa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="bootstrap-icons.css" />
+</head>
+
+<body>
+    <div class="pagar">
+
+        <button class="button-add" onclick="add('', $)"><button id = "checkout"
+                    class = "button-checkout"
+                    onclick = "pay()">Pagar</button>
+
+    </div>
+
+    <i class="fa-sharp fa-solid fa-cart-shopping" id="carritoContenedor">0</i>
+    </a>
+    </li>
+    </ul>
+    </nav>
+    </header>
+
+
+
+    <div class="container-xl">
+        <div class="modal" tabindex="-1" role="dialog" id="modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title">Carrito</h1>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" id="vaciarCarrito">
+            Vaciar carrito
+          </button>
+                        <button type="button" class="btn btn-primary">
+           <a href="tienda.html"> Continuar compra</a>
+          </button>
+                        <button type="button" id="procesarCompra" class="btn btn-primary">
+            <a href="compra.html">Pagar</a>
+           </button>
+
+                        <span>Precio total:</span>
+                        <p class="text-center" id="precioTotal"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
