@@ -5,14 +5,14 @@
     <title>Tienda de musica Toma awa</title>
     <link rel="stylesheet" href="spinner.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="styleee.css">
-    <link rel="stylesheet" href="spinner.css">
+    <link rel="stylesheet" href="compra.css">
+
     <link rel="icon" type="image/x-icon" href="logo.ico">
     <!-- <link rel="stylesheet" href="bootstrap.min.css" /> -->
     <link rel="stylesheet" href="bootstrap-icons.css" />
 
     <script src="script.js"></script>
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="logo.ico">
 
 
@@ -21,7 +21,12 @@
 <title>Tienda de musica Toma awa</title>
 
 
+
 <body>
+    <audio className="audiobackground" id="audiobackground" loop controls autoplay>
+        <source src="/sounds/NoCopyright.mp3" type="audio/mp3">
+    </audio>
+    <video className="video" id="fondo" loop autoplay muted> <source  src="arboles.mp4" type="video/mp4"> </video>
     <header>
         <logo>
             <a href="tienda.html" class="logo">
@@ -29,28 +34,33 @@
                 </div>
         </logo>
         <a href="tienda.html" class="nav-link">
-            <h1 class="p-3 text-white">Tienda de musica
-                <spann>Toma awa
-                </spann>
-            </h1>
+            <p>
+                <h1 class="p-3 text-white">Tienda de musica
+                    <spann>Toma awa
+                    </spann>
+                </h1>
+
         </a>
-        <navlink>
-            <nav>
-                <a href="#" class="nav-link">inicio</a>
-            </nav>
-        </navlink>
+        </p>
+        <p>
+            <navlink>
+                <nav>
+                    <a href="tienda.html" class="nav-link">inicio</a>
+                </nav>
+            </navlink>
+        </p>
 
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#modal">
-                    <img src="cart-shopping.svg" height="35" width="35"><i class="fa-sharp fa-solid fa-cart-shopping" id="carritoContenedor">0</i>
+                    <!-- <img src="cart-shopping.svg" height="35" width="35"> --><i class="fa-sharp fa-solid fa-cart-shopping carritooo" id="carritoContenedor">0</i>
                 </a>
 
             </li>
         </ul>
 
     </header>
-    <img class="fondo" src="fondo.jpg">
+    <!-- <img class="fondo" src="fondo.jpg"> -->
 
     <!-- 
     <header>
@@ -88,11 +98,13 @@
                                     <input type="text" id="correo" class="form-control" name="email.id" id="email.id">
                                 </div>
                             </div> -->
-            <div class="todo">
-                <div class="title">
 
-                    <h1 class="d-flex justify-content-center mb-3">Realizar Compra</h1>
-                </div>
+
+            <div class="title">
+
+                <h1 class="d-flex justify-content-center mb-3">Realizar Compra</h1>
+            </div>
+            <div class="todo">
                 <div class="page-content">
                     <!-- </div> -->
                     <!-- <form id="procesar-pago" method="POST"> -->
@@ -106,11 +118,17 @@
                                     <input type="email" name="email" class="form-control" placeholder="Email" required>
                                 </div>
                             </div>
+                            <div id="tarjeta">
+                                <div class="tarjeta"></div>
+                                <input type="number" placeholder="Tarjeta Crédito o Debito" class="form-control" name="credit-card" inputmode="numeric" required>
+
+                            </div>
                         </div>
-                        <div id="mensaje" class="form-group">
+                        <div id="mensaje">
                             <div class="compra"></div>
-                            <textarea placeholder="Mensaje" class="form-control" name="message" rows="5" required></textarea>
+                            <textarea placeholder="Mensaje" class="form-control" name="message" rows="3" required></textarea>
                         </div>
+
 
 
 
@@ -120,6 +138,7 @@
                                 <table class="table" id="lista-compra">
                                     <thead>
                                         <tr>
+
                                             <th scope="col">Imagen</th>
                                             <th scope="col">Nombre</th>
                                             <th scope="col">Precio</th>
@@ -147,15 +166,20 @@
                                 <div class="dot2"></div>
                             </div>
                         </div>
-                        <div class="boton1">
-                            <div class="row justify-content-between">
-                                <div class="col-md-4 mb-2 ">
-                                    <button onclick="location.href='tienda.html'" class="btn">Seguir comprando</button>
+                        <img src="./img/payment.png">
+                        <div class="botones">
+                            <div class="boton1">
+                                <div class="row justify-content-between">
+                                    <div class="col-md-4 mb-2 ">
+                                        <button onmousedown="playAudio()" onclick="location.href='tienda.html'" class="btn">Seguir comprando</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="boton2"> <button type="submit" class="btn-dark btn-block">Finalizar compra</button>
+
+                                <div class="col-xs-12 col-md-4">
+                                    <div onmousedown="playAudio()" class="boton2"> <button type="submit" class="btn-dark btn-block">Finalizar compra</button>
+                                    </div>
                                 </div>
+
                     </form>
 
                     </div>
@@ -168,11 +192,52 @@
 
             </div>
 
+
     </div>
     </main>
     </div>
     </div>
     </div>
+    <audio id="myAudio">
+        <source src="./sounds/agregar1.wav" type="audio/wav">
+    </audio>
+    <audio id="myAudio2">
+        <source src="./sounds/cambiar.mp3" type="audio/mp3">
+        </audio>
+    <audio id="myAudio3">
+        <source src="./sounds/quitar2.wav" type="audio/wav">
+    </audio>
+    <script>
+        var x = document.getElementById("myAudio");
+
+        function playAudio() {
+            x.play();
+        }
+
+        function pauseAudio() {
+            x.pause();
+        }
+
+        var a = document.getElementById("myAudio2");
+
+        function playAudio2() {
+            a.play();
+        }
+
+        function pauseAudio() {
+            a.pause();
+        }
+
+        var b = document.getElementById("myAudio3");
+
+        function playAudio3() {
+            b.play();
+        }
+
+        function pauseAudio() {
+            b.pause();
+        }
+    </script>
 
 </body>
 

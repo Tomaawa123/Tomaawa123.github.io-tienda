@@ -232,23 +232,40 @@ if (procesarCompra) {
     });
 }
 
+
 stockProductos.forEach((prod) => {
     const { id, nombre, precio, desc, img, cantidad } = prod;
     if (contenedor) {
         contenedor.innerHTML += `
-        <div class="card mt-3 item" style="width: 18rem;">
-  <img class="card-img-top mt-2 item-img" src="${img}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">${nombre}</h5>
-    <p class="card-text">Precio: ${precio}</p>
+    <div class="card mt-3 item">
+    <div id="content">
+    <a onmousedown="playAudio()" href="#${id}" class="wiggle"><img  class="card-img-top mt-2 item-img" src="${img}" />Ver imagen</a>
+    <div class="lightbox short-animate" id="${id}">
+            <img class="long-animate" src="${img}" />
+        </div>
+        <div id="lightbox-controls" class="short-animate">
+            <a onmousedown="playAudio3()" id="close-lightbox" class="long-animate" href="#!">Close Lightbox</a>
+        </div>
+        </div>
+    <div class="card-body">
+    <h3 class="card-title">${nombre}</h3>
+    <h4 class="card-text">Precio: ${precio}</h4>
     <p class="card-text">Descripcion: ${desc}</p>
     <p class="card-text">Cantidad: ${cantidad}</p>
-    <button class="btn btn-primary" onclick="agregarProducto(${id})">Agregar<i class="fa-sharp fa-solid fa-cart-shopping"></i></button>
+    <button onmousedown="playAudio()" class="btn btn-primary agregar" onclick="agregarProducto(${id})">Agregar<i class="fa-sharp fa-solid fa-cart-shopping"></i></button>
   </div>
 </div>
+
+
   `;
+
+
+
+
     }
 });
+
+
 
 const agregarProducto = (id) => {
     const existe = carrito.some(prod => prod.id === id)
@@ -283,7 +300,7 @@ const mostrarCarrito = () => {
       <p>Producto: ${nombre}</p>
     <p>Precio: ${precio}</p>
     <p>Cantidad :${cantidad}></p>
-    <button class="btn btn-danger"  onclick="eliminarProducto(${id})">Eliminar producto<i class="fa-sharp fa-solid fa-circle-xmark"></i></button>
+    <button class="btn btn-danger" onmousedown="playAudio()"  onclick="eliminarProducto(${id})">Eliminar producto<i class="fa-sharp fa-solid fa-trash"></i><i class="fa-sharp fa-solid fa-circle-xmark" style="color: black;"></i></button>
       </div>
     </div>
     
@@ -331,13 +348,12 @@ function procesarPedido() {
             row.innerHTML += `
             <tr>
             <td>
-            <img class="img-fluid img-carrito" src="${img}" height="170" width="170"/>
+            <img class="img-fluid img-carrito" src="${img}" height="95" width="95"/>
             </td>
             <td>|${nombre}|</td>
           <td>|$${precio}|</td>
-          <td>|${cantidad}>|</td>
+          <td>|${cantidad}|</td>
           <td>|$${precio * cantidad}|</td>
-          
           </tr>
           `;
 
@@ -410,7 +426,7 @@ function enviarCompra(e) {
     }
     localStorage.clear()
 }
-$("#open").click(function() {
+/* $("#open").click(function() {
     $("#a").css("display", "block");
     $("#b").css("display", "block");
 });
@@ -419,7 +435,7 @@ $("#open").click(function() {
 $(".cancel").click(function() {
     $("#a").fadeOut();
     $("#b").fadeOut();
-});
+}); */
 
 const mensaje = Document.getElementById('textarea')
 mensaje.addEventListener('change', escribir)

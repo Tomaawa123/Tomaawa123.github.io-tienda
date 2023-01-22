@@ -5,22 +5,24 @@
     <meta charset="UTF-8">
     <html lang="es">
     <title>Tienda de musica Toma awa</title>
-    <link rel="stylesheet" href="stylee.css">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="nuevaclave.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
-        <a href="#" class="logo">
+        <a href="tienda.html" class="logo">
             <img src="logo.png" alt="logo de la empresa">
             </div>
-            <h1> Tienda de musica Toma awa
-            </h1>
+            <h2>Tienda de musica
+                <spann>Toma awa
+                </spann>
+            </h2>
             <nav>
-                <a href="https://tomaawa123.github.io/tienda" class="nav-link"> inicio</a>
-                <a href="index.html" class="nav-link"> Iniciar sesión</a>
+                <a onmousedown="playAudio3()" href="tienda.html" class="nav-link"> inicio</a>
+                <a onmousedown="playAudio3()" href="index.html" class="nav-link"> Iniciar sesión</a>
             </nav>
-            <button id="checkout" class="button-checkout" onclick="payy()">Pagar</button>
+
     </header>
     <div class="box">
         <form autocomplete="off">
@@ -35,8 +37,53 @@
                 <span>Contraseña nueva</span>
                 <i></i>
             </div>
-            <button onclick="location.href='index.html'">Volver a iniciar sesión</button> </form>
+            <button onmousedown="playAudio3()" onclick="location.href='index.html'">Volver a iniciar sesión</button> </form>
     </div>
+    <audio id="myAudio">
+        <source src="./sounds/agregar1.wav" type="audio/wav">
+    </audio>
+    <audio id="myAudio2">
+        <source src="./sounds/cambiar.mp3" type="audio/mp3">
+        </audio>
+    <audio id="myAudio3">
+        <source src="./sounds/quitar2.wav" type="audio/wav">
+    </audio>
+    <script>
+        var x = document.getElementById("myAudio");
+
+        function playAudio() {
+            x.play();
+        }
+
+        function pauseAudio() {
+            x.pause();
+        }
+
+        var a = document.getElementById("myAudio2");
+
+        function playAudio2() {
+            a.play();
+        }
+
+        function pauseAudio() {
+            a.pause();
+        }
+
+        var b = document.getElementById("myAudio3");
+
+        function playAudio3() {
+            b.play();
+        }
+
+        function pauseAudio() {
+            b.pause();
+        }
+    </script>
+    <div class="audiobackground">
+        <audio className="audiobackground" id="audiobackground" loop controls autoplay>
+        <source src="/sounds/NoCopyright.mp3" type="audio/mp3">
+        
+    </audio>
 </body>
 
 </html>
