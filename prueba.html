@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <html lang="es">
+    <title>Tienda de musica Toma awa</title>
+    <link rel="stylesheet" href="prueba.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+
+
+
+</head>
+
+<body>
+    <section>
+        <h1>Prueba HTML5 y CSS3</h1>
+    </section>
+
+    <!--  <audio className="audiobackground" id="audiobackground" loop controls autoplay>
+        <source src="/sounds/NoCopyright.mp3" type="audio/mp3">
+    </audio> -->
+
+    <main>
+        <div class="productos">
+            <div class="prueba" id="contenedor"></div>
+        </div>
+    </main>
+    <section class="contenedor-audios">
+        <audio id="audio-agregar1" controls>
+<source src="sounds/agregar1.wav" type="audio/wav">
+</audio>
+        <audio id="audio-quitar2" controls>
+<source src="./sounds/quitar2.wav" type="audio/wav">
+</audio>
+        <audio id="audio-cambiar" controls>
+<source src="./sounds/cambiar.mp3" type="audio/mp3">
+
+</audio>
+    </section>
+    <!--  -->
+    <button onclick="playAudio()" id="botonxd">xd</button>
+    <audio id="myAudio">
+        <source src="./sounds/agregar1.wav" type="audio/wav">
+        <source src="./sounds/agregar1.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+
+    <p>Click the buttons to play or pause the audio.</p>
+
+    <button onclick="playAudio()" type="button">Play Audio</button>
+    <button onclick="pauseAudio()" type="button">Pause Audio</button>
+
+    <script>
+        var x = document.getElementById("myAudio");
+
+        function playAudio() {
+            x.play();
+        }
+
+        function pauseAudio() {
+            x.pause();
+        }
+    </script>
+
+    </div>
+    <button id="a">Reproducir audio</button>
+    <script>
+        document.getElementById("a")
+        let boton = document.querySelector("a")
+
+        boton.addEventListener("click", () => {
+            document.getElementById("a")
+            let etiquetaAudio = document.createElement("audio")
+            etiquetaAudio.setAttribute("src", "./sounds/agregar1.wav")
+            etiquetaAudio.play()
+        })
+    </script>
+
+    <div id="content">
+        <h2>Efecto LightBox en CSS3</h2>
+        <a href="#img1" class="wiggle"><img src="./img/acordeon.jpg" width="160px" height="160px" /></a>
+        <div class="lightbox short-animate" id="image1">
+            <img class="long-animate" src="./img/acordeon.jpg" />
+        </div>
+        <a href="#image2" class="wiggle"><img src="./img/bajo.jpg" width="160px" height="160px" /></a>
+        <div class="lightbox short-animate" id="image2">
+            <img class="long-animate" src="./img/bajo.jpg" />
+        </div>
+        <a href="#image3" class="wiggle"><img src="./img/bateriaelectrica.jpg" width="160px" height="160px" /></a>
+        <div class="lightbox short-animate" id="image3">
+            <img class="long-animate" src="./img/bateriaelectrica.jpg" />
+        </div>
+        <div id="lightbox-controls" class="short-animate">
+            <a id="close-lightbox" class="long-animate" href="#!">Close Lightbox</a>
+        </div>
+    </div>
+</body>
+
+</html>
